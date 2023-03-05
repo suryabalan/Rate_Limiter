@@ -1,5 +1,5 @@
 
-# Rate_Limiter
+# Rate Limiter
 
 This project implements a rate limiter for Spring Boot in Microservices architecture. A rate limiter is a mechanism that restricts the number of requests a client can make to a particular API within a certain time window. Rate limiting helps protect APIs from abuse and prevents overloading of the server. Here for acheiving this, bucket4j dependency is used. Used Concurrent hashmap for storing the user and their limit details. ConcurrentHashMap is a thread-safe implementation of the Map interface in Java, which means multiple threads can access it simultaneously without any synchronization issues.
 
