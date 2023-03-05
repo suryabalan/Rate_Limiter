@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AmazonShoppingApplication<amazon-shopping>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.javatechie.spring.eureaka.client.api.AmazonShoppingApplication",
+            "projectName": "amazon-shopping",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-QuarantineMeApplication<QuarantineMe>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.QuarantineMe.QuarantineMeApplication",
+            "projectName": "QuarantineMe",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DiscoveryServerApplication<discovery-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.discoveryserver.DiscoveryServerApplication",
+            "projectName": "discovery-server",
+            "args": ""
+        }
+    ]
+}

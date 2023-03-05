@@ -1,0 +1,8 @@
+spring:
+    application:
+      name: UserTwo
+server:  
+  port: 8888
+
+
+    
