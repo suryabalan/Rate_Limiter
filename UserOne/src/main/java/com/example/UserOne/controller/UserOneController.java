@@ -19,7 +19,7 @@ public class UserOneController {
     @ResponseBody
     public ResponseDTO apiOne() {
         try {
-            String user = "Surya";
+            String user = AppConstants.NAME;
             return template.getForObject("http://localhost:7777/api/v1/api-one?user=" + user, ResponseDTO.class);
         }catch (RateLimitException e){
             throw e;
@@ -30,7 +30,7 @@ public class UserOneController {
     @ResponseBody
     public ResponseDTO apiTwo() {
         try {
-            String user = "Surya";
+            String user = AppConstants.NAME;
             return template.getForObject("http://localhost:7777/api/v1/api-two?user=" + user, ResponseDTO.class);
         }catch (RateLimitException e){
             throw e;
@@ -40,13 +40,21 @@ public class UserOneController {
     @GetMapping(value = PathConstants.API_THREE)
     @ResponseBody
     public ResponseDTO apiThree() {
-        String user = "Surya";
-        return template.getForObject("http://localhost:7777/api/v1/api-three?user=" + user, ResponseDTO.class);
+        try {
+            String user = AppConstants.NAME;
+            return template.getForObject("http://localhost:7777/api/v1/api-three?user=" + user, ResponseDTO.class);
+        }catch (RateLimitException e){
+            throw e;
+        }
     }
 
     @PostMapping(value = PathConstants.MASTER)
     @ResponseBody
     public ResponseDTO insertLimit(@RequestBody LimitDTO limitDTO){
-        return template.postForObject("http://localhost:7777/api/v1/master",limitDTO,ResponseDTO.class);
+        try {
+            return template.postForObject("http://localhost:7777/api/v1/master", limitDTO, ResponseDTO.class);
+        }catch (RateLimitException e){
+            throw e;
+        }
     }
 }

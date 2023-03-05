@@ -14,5 +14,8 @@ public class AppConstants {
     public static final String NULL_EXCEPTION = "Please enter proper api name and limit";
     public static final String LIMIT_ADDED_SUCCESSFULLY = "Limit added successfully";
     public static final int ZERO = 0;
+    public static final int TWO = 2;
+    public static final int FIVE = 5;
+    public static final int TEN = 10;
 
 }

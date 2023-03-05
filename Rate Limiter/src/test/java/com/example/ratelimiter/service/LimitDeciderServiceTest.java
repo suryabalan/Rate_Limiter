@@ -1,6 +1,5 @@
 package com.example.ratelimiter.service;
 
-import com.example.ratelimiter.constants.AppConstants;
 import com.example.ratelimiter.dto.LimitDTO;
 import io.github.bucket4j.Bandwidth;
 import io.github.bucket4j.Bucket;

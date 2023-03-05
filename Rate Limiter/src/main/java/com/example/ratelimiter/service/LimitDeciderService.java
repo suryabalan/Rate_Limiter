@@ -58,28 +58,28 @@ public class LimitDeciderService {
    public int resolvePlanFromApiKey(String apiKey) {
         if (apiKey == null || apiKey.isEmpty()) {
             if (!plan.containsKey(AppConstants.API_ONE)) {
-                plan.put(AppConstants.API_ONE, 2);
+                plan.put(AppConstants.API_ONE, AppConstants.TWO);
             }
             return plan.get(AppConstants.API_ONE);
         } else if (apiKey.startsWith(AppConstants.API_ONE)) {
             if (!plan.containsKey(AppConstants.API_ONE)) {
-                plan.put(AppConstants.API_ONE, 2);
+                plan.put(AppConstants.API_ONE, AppConstants.TWO);
             }
             return plan.get(AppConstants.API_ONE);
         } else if (apiKey.startsWith(AppConstants.API_TWO)) {
             if (!plan.containsKey(AppConstants.API_TWO)) {
-                plan.put(AppConstants.API_TWO, 5);
+                plan.put(AppConstants.API_TWO, AppConstants.FIVE);
             }
             return plan.get(AppConstants.API_TWO);
         }
         else if (apiKey.startsWith(AppConstants.API_THREE)) {
             if (!plan.containsKey(AppConstants.API_THREE)) {
-                plan.put(AppConstants.API_THREE, 10);
+                plan.put(AppConstants.API_THREE, AppConstants.TEN);
             }
             return plan.get(AppConstants.API_THREE);
         }
         if (!plan.containsKey(AppConstants.API_ONE)) {
-            plan.put(AppConstants.API_ONE, 2);
+            plan.put(AppConstants.API_ONE, AppConstants.TWO);
         }
         return plan.get(AppConstants.API_ONE);
     }
