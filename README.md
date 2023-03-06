@@ -47,6 +47,7 @@ Bucket4j is a Java rate-limiting library based on the token-bucket algorithm. Bu
    - Here the limits is considered per minute. For example: 5 requests per minute. After a minute, it gets updated automatically.
    - We can set the rate limit for each API. If not, we have default values of 2 requests per minute for api one, 5 requests per minute for api two and 
      10 requests per minute for api three.
+   - We have to set the limit before calling the api's. If not, the value we set explicitly will not work. It will take the default values.
 
 4. Working logic:
 
